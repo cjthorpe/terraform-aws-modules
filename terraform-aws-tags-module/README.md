@@ -1,11 +1,9 @@
 # terraform-aws-tags-module
--------------
 
 Terraform module to define mandatory tags for AWS infrastructure and resources.
 
 Requires Terraform v0.12 and utilises HCL2 syntax.
 
--------------
 ## SSH
 
 Rather than expose SSH keys within code make use of ssh-agent to securely store the key for use with Terraform.
@@ -16,7 +14,6 @@ Follow the instructions [here](https://docs.aws.amazon.com/codecommit/latest/use
 $ eval $(ssh-agent -s) ssh-add codecommit_rsa
 ```
 
--------------
 ## Usage
 
 ```
@@ -34,7 +31,6 @@ module "tags" {
   source          = "git@github.com:cjthorpe/terraform-aws-modules//terraform-aws-tags-module"
 }
 ```
-
 
 The above variable definitions would assume the following form:
 ```
@@ -68,9 +64,10 @@ tags = merge(
        ) 
 ```
 
--------------
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|:----:|:-----:|:-----:|| AZ | The availability zone in use. Use Regional or Global if AZ is not appropriate. | string | | Yes || environment | The environment within which the infrastructure will be created. | string | | Yes |
-| project_service | The name of the service. | string | | Yes |
+|------|-------------|------|---------|----------|
+| AZ | The availability zone in use. Use Regional or Global if AZ is not appropriate. | string | - | Yes |
+| environment | The environment within which the infrastructure will be created. | string | - | Yes |
+| project_service | The name of the service. | string | - | Yes |
