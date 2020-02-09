@@ -57,5 +57,5 @@ variable "project_defs" {
 
 ## References
 
-This module also references [terraform-aws-tags-module](https://github.com/cjthorpe/terraform-aws-modules//terraform-aws-tags-module).
+This module also references [terraform-aws-tags-module](https://github.com/cjthorpe/terraform-aws-modules/tree/master/terraform-aws-tags-module).
 
